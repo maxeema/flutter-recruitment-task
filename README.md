@@ -1,6 +1,10 @@
-# Flutter recruitment task
+# Netguru's Flutter recruitment task
 
 This task is aimed to check your knowledge about Flutter app development and testing.
+
+### Run/Test on Flutter web
+
+`flutter run -d chrome --web-renderer html`
 
 ### Task description
 Your goal is to get data from the `MoviesRepository` and display a list of movies in the `MoviesListScreen`. 
@@ -14,5 +18,5 @@ Application uses [Flutter Intl](https://plugins.jetbrains.com/plugin/13666-flutt
 
 ### Finished app screenshot
 
-![Screenshot1](https://raw.githubusercontent.com/netguru/flutter-recruitment-task/master/previews/Screenshot_1.png)
+![Screenshot1](previews/Screenshot_1.png)
 

@@ -11,7 +11,7 @@ import '../../../theme/app_colors.dart';
 import '../../../theme/app_dimensions.dart';
 
 class MovieItemRow extends StatelessWidget {
-  MovieItemRow(this._movie);
+  const MovieItemRow(this._movie);
 
   final MovieItem _movie;
 
@@ -43,9 +43,11 @@ class MovieItemRow extends StatelessWidget {
           padding: const EdgeInsets.all(AppDimensions.spacingNormal),
           child: Row(
             children: [
-              Text(
-                _movie.title,
-                style: AppTextStyles.title().copyWith(color: AppColors.white),
+              Expanded(
+                child: Text(
+                  _movie.title,
+                  style: AppTextStyles.title().copyWith(color: AppColors.white),
+                ),
               ),
             ],
           ),

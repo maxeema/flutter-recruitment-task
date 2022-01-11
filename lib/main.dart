@@ -1,3 +1,4 @@
+import 'package:filmguru/feature/movies_list/bloc/movies_list_bloc.dart';
 import 'package:filmguru/feature/movies_list/movies_list_screen.dart';
 import 'package:filmguru/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,12 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Filmguru',
         theme: AppTheme.theme,
-        home: MoviesListScreen(),
+        home: BlocProvider(
+          create: (BuildContext context) {
+            return MoviesListBloc(moviesRepository: context.read<MoviesRepository>())..execute();
+          },
+          child: MoviesListScreen(),
+        ),
         localizationsDelegates: [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
